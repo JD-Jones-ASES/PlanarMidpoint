@@ -1,0 +1,10 @@
+{
+  "challenge_module": "PlanarMidpointChallenge",
+  "solution_module": "PlanarMidpointSolution",
+  "theorem_names": [
+    "PlanarMidpoint.planar_dual_midpoint_rigidity",
+    "PlanarMidpoint.planar_obstruction_rigidity",
+    "PlanarMidpoint.planar_five_direction_rigidity"
+  ],
+  "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"]
+}
