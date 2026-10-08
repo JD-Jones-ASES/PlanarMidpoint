@@ -43,7 +43,7 @@ automation:
       tool_setup: OpenAI Codex with GPT-6 Astra and collaborating agents
       notes: >-
         Agents developed the proof, exact polynomial certificates, analytic
-        estimates, Lean formalization and private verification workflow.
+        estimates, Lean formalization and verification workflow.
         Separate agents reviewed theorem fidelity and transitive axioms.
         Tactics elaborate proof terms checked by the Lean kernel; no custom
         axiom, unsafe evaluator or external computational oracle is used.
@@ -52,9 +52,9 @@ review:
   notes: >-
     Independent agent reviews checked the full midpoint hypothesis, tensor
     normalization, exceptional loci, zero values, connectedness and transitive
-    axiom sets. No external human peer review, Palomar submission or registry
-    acceptance is claimed. The workflow records verification evidence for
-    private exact-commit GitHub Actions runs.
+    axiom sets. This was internal agent review, not external human peer review.
+    The workflow records verification evidence for exact-commit GitHub Actions
+    runs. See Disclosure.md for the concise AI assistance statement.
 fidelity:
   notes: >-
     Full planar case only. The geometric theorem includes the local

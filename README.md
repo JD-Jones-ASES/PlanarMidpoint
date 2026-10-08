@@ -5,8 +5,7 @@ on a connected open subset of the Euclidean plane, complementary canonical
 midpoints for a pair of dual torsion-free connections force their symmetric
 cubic tensor to be constant.
 
-The repository is private. It has not been submitted to or registered with
-Palomar. The theorem concerns dimension two; it does not resolve the conjecture
+The theorem concerns dimension two; it does not resolve the conjecture
 in arbitrary dimension.
 
 ## Statements
@@ -115,13 +114,13 @@ lake build
 lake comparator --config comparator.json
 ```
 
-Comparator requires Linux with bubblewrap. The private GitHub Actions workflow
+Comparator requires Linux with bubblewrap. The GitHub Actions workflow
 builds the exact checked-out commit, audits the theorem axioms, compares all
 three statements and definitions, and replays the exported proofs through
 Lean, NanoDa and con-ron. A separate fresh-runner build checks reproducibility.
 The runtime configuration enabling the extra kernels is generated in the
 runner's temporary directory; the committed configuration follows Palomar's
-statement format. These checks are private preparation, not registry intake.
+statement format.
 
 ## Sources and authorship
 
@@ -134,7 +133,6 @@ The nearby [two-dimensional Matkowski–Sutô work](https://arxiv.org/html/2609.
 concerns coordinate generators and does not supply the Euclidean-dual theorem
 proved here. No global priority or external peer-review claim is made.
 
-JD Jones is the responsible human maintainer. OpenAI Codex agents developed
-the mathematical argument, Lean proofs and verification tooling and performed
-separate statement and axiom reviews. Structured provenance and automation
-disclosure are in [`formalization.yaml`](formalization.yaml).
+JD Jones is the responsible human maintainer. AI assistance and review are
+described in [Disclosure.md](Disclosure.md); structured provenance is recorded
+in [`formalization.yaml`](formalization.yaml).
