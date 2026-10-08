@@ -19,6 +19,9 @@ namespace PlanarMidpoint
 abbrev E := EuclideanSpace ℝ (Fin 2)
 abbrev Coeff := Fin 4 → ℝ
 
+/-- The affine midpoint parameter, explicitly named to keep independent statements identical. -/
+noncomputable abbrev midpointTime : ℝ := 1 / 2
+
 def vec (x y : ℝ) : E := !₂[x, y]
 
 @[simp] theorem vec_zero (x y : ℝ) : vec x y 0 = x := rfl

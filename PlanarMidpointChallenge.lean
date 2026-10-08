@@ -29,6 +29,9 @@ abbrev E := EuclideanSpace ℝ (Fin 2)
 /-- The four independent coordinates of a totally symmetric planar cubic. -/
 abbrev Coeff := Fin 4 → ℝ
 
+/-- The affine midpoint parameter, explicitly named to keep independent statements identical. -/
+noncomputable abbrev midpointTime : ℝ := 1 / 2
+
 /-- A vector in standard Euclidean coordinates. -/
 def vec (x y : ℝ) : E := !₂[x, y]
 
@@ -57,7 +60,7 @@ def IsCanonicalLocalMidpoint (Ω : Set E) (C : E → Coeff) (σ : ℝ)
     (p : E) (r : ℝ) (W : Set (E × E)) (A : E → E → E) : Prop :=
   0 < r ∧ ball p r ⊆ Ω ∧ IsOpen W ∧ (p, p) ∈ W ∧
   ∀ P Q, (P, Q) ∈ W → ∃ γ v,
-    IsShortGeodesic C σ p r P Q γ v ∧ A P Q = γ (1/2) ∧
+    IsShortGeodesic C σ p r P Q γ v ∧ A P Q = γ midpointTime ∧
     ∀ γ' v', IsShortGeodesic C σ p r P Q γ' v' →
       ∀ t ∈ Icc (0 : ℝ) 1, γ' t = γ t ∧ v' t = v t
 

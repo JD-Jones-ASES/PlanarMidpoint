@@ -31,7 +31,7 @@ def IsCanonicalLocalMidpoint (Ω : Set E) (C : E → Coeff) (σ : ℝ)
     (p : E) (r : ℝ) (W : Set (E × E)) (A : E → E → E) : Prop :=
   0 < r ∧ ball p r ⊆ Ω ∧ IsOpen W ∧ (p, p) ∈ W ∧
   ∀ P Q, (P, Q) ∈ W → ∃ γ v,
-    IsShortGeodesic C σ p r P Q γ v ∧ A P Q = γ (1/2) ∧
+    IsShortGeodesic C σ p r P Q γ v ∧ A P Q = γ midpointTime ∧
     ∀ γ' v', IsShortGeodesic C σ p r P Q γ' v' →
       ∀ t ∈ Icc (0 : ℝ) 1, γ' t = γ t ∧ v' t = v t
 
