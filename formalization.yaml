@@ -20,23 +20,27 @@ classification:
   msc2020: [53B12, 39B22]
 sources:
   - title: Planar Euclidean midpoint rigidity
-    type: other
+    type: original-proof
     authors: [JD Jones]
-    relationship: formalizes
-    notes: >-
-      Original unpublished argument developed for this project and explained
-      in README.md. The Lean proof also establishes the analytic bridge and
-      the differentiability strengthening. This is not a claim of worldwide
-      priority. Material automated contributions are disclosed below.
+    relationship: other
+    location: README.md
+    note: >-
+      This project first presents its original planar necessity proof, analytic
+      bridge and differentiability strengthening. README.md accompanies the same
+      development; it is not a distinct prior source work being formalized.
+      The underlying general-dimensional conjecture is credited below.
+      This is not a claim of worldwide priority. Material automated
+      contributions are disclosed below.
   - title: Nielsen–Okamura, arXiv:2609.07551v2, Section 9
     type: paper
     authors: [Frank Nielsen, Kazuki Okamura]
-    url: https://arxiv.org/html/2609.07551v2#S9
-    relationship: adapts
-    notes: >-
-      Source of Conjecture 9.1, the dual-geodesic midpoint expansion and
-      constant-cubic sufficiency. The source states the conjecture in general
-      dimension; this project proves its complete dimension-two necessity.
+    id: https://arxiv.org/html/2609.07551v2#S9
+    relationship: background
+    note: >-
+      Source of Conjecture 9.1, the dual-geodesic midpoint expansion adapted
+      here and constant-cubic sufficiency. The source states the conjecture in
+      general dimension; this project supplies the original complete
+      dimension-two necessity proof.
 automation:
   methods:
     - method: agent
@@ -56,7 +60,7 @@ review:
     The workflow records verification evidence for exact-commit GitHub Actions
     runs. See Disclosure.md for the concise AI assistance statement.
 fidelity:
-  notes: >-
+  divergences: >-
     Full planar case only. The geometric theorem includes the local
     geodesic-to-obstruction implication and assumes no smooth family of
     endpoint solutions. The stronger C2 geometric theorem is supporting
